@@ -30,6 +30,11 @@ btn_wpp.addEventListener('click', () => {
     window.open('https://api.whatsapp.com/send?phone=5583987289110&text=Gra%C3%A7a%20e%20Paz!')
 })
 
+const btn_contatenos = document.querySelector('#contatenos')
+btn_wpp.addEventListener('click', () => {
+    window.open('https://api.whatsapp.com/send?phone=5583987289110&text=Gra%C3%A7a%20e%20Paz!')
+})
+
 const copia_pix = document.querySelector('#btn_pix')
 copia_pix.addEventListener('click', () => {
     navigator.clipboard.writeText('05786139000126').then(() => {
