@@ -1,6 +1,10 @@
 header {
+    height: 60px;
     width: 100%;
     padding: 10px 8%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    margin-bottom: 30px;
 }
 
 #navbar {
@@ -16,15 +20,28 @@ header {
     gap: 48px;
 }
 
-.nav-item a {
+nav a {
+    position: relative;
     text-decoration: none;
-    color: #1d1d1dad;
-    font-weight: 400;
+    color: #111;
+    font-weight: 500;
 }
 
-.nav-item.active a {
-    color: #1d1d1d;
-    border-bottom: 3px solid #111111;
+nav a::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: '';
+    background-color: #111;
+    width: 0;
+    height: 2px;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+nav a:hover::before {
+    width: 100%;
+    
 }
 
 #mobile_btn, #mobile_menu {
